@@ -5,10 +5,10 @@ import json
 import os
 import random
 from datetime import datetime
-from . import models
-from .database import engine
-from .pii_detector import scan_for_pii
-from .grounding_checker import calculate_grounding_score  # Novo import
+import models
+from database import engine
+from pii_detector import scan_for_pii
+from grounding_checker import calculate_grounding_score  # Novo import
 
 # Criação do banco de dados
 models.Base.metadata.create_all(bind=engine)
@@ -22,19 +22,13 @@ app = FastAPI(
 # ==========================================
 # CONFIGURAÇÃO DE CORS (Cloud & Localhost)
 # ==========================================
-# Isso permite que o seu Frontend (que estará na Vercel) 
-# consiga acessar esta API (que estará no Render) sem ser bloqueado.
-origins = [
-    "http://localhost:3000",      # Permite o teste local na sua máquina
-    "*"                           # Curinga: permite qualquer origem (ideal para o MVP não quebrar no primeiro deploy)
-]
-
+# Isso permite que o seu Frontend consiga acessar esta API sem ser bloqueado.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"], # Permite todos os métodos (GET, POST, etc.)
-    allow_headers=["*"], # Permite todos os cabeçalhos
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 # ==========================================
 
