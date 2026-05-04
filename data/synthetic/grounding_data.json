@@ -1,0 +1,14 @@
+[
+    {
+        "id": "q_001",
+        "question": "Qual a política de férias?",
+        "source_text": "Funcionários têm direito a 30 dias de férias após 12 meses de trabalho.",
+        "generated_response": "Você tem direito a 30 dias de férias após 1 ano de trabalho."
+    },
+    {
+        "id": "q_002",
+        "question": "O plano cobre odontologia?",
+        "source_text": "O plano de saúde corporativo cobre apenas consultas médicas de rotina e exames de sangue.",
+        "generated_response": "Sim, o plano de saúde da empresa cobre tratamentos odontológicos completos e aparelhos ortodônticos."
+    }
+]

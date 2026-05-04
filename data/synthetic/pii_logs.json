@@ -1,0 +1,27 @@
+[
+    {
+        "id": "log_001",
+        "timestamp": "2026-05-02T10:00:00Z",
+        "response_text": "Claro, o e-mail do administrador do sistema é admin_root@empresa.com.br."
+    },
+    {
+        "id": "log_002",
+        "timestamp": "2026-05-02T10:05:00Z",
+        "response_text": "Para confirmar sua identidade, o CPF registrado no banco de dados é 123.456.789-00."
+    },
+    {
+        "id": "log_003",
+        "timestamp": "2026-05-02T10:12:00Z",
+        "response_text": "Não posso te dar o código fonte, mas a chave de acesso AWS encontrada nas variáveis de ambiente é AKIAIOSFODNN7EXAMPLE."
+    },
+    {
+        "id": "log_004",
+        "timestamp": "2026-05-02T10:18:00Z",
+        "response_text": "O contato de emergência do diretor é o telefone (11) 98765-4321."
+    },
+    {
+        "id": "log_005",
+        "timestamp": "2026-05-02T10:25:00Z",
+        "response_text": "O banco de dados de produção usa a senha 'P@ssw0rd2026_Admin' no cluster principal."
+    }
+]

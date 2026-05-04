@@ -1,0 +1,41 @@
+# ==========================================
+# 🛡️ AI Trust & Security Auditor - Gitignore
+# ==========================================
+
+# 1. Ambientes Virtuais e Dependências (Prevenção de inchaço do repo)
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# 2. Bancos de Dados e Arquivos Locais (Prevenção de Data Leakage)
+*.db
+*.sqlite
+*.sqlite3
+auditor.db
+
+# 3. Variáveis de Ambiente e Segredos (Prevenção de Credential Leakage)
+.env
+.env.*
+!.env.example
+
+# 4. Ferramentas de IA e Agentes (Prevenção de vazamento de prompts/logs)
+.agents/
+.claude/
+*.log
+
+# 5. Configurações de Sistema Operacional e Editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# Nota: A pasta /frontend já possui seu 
+# próprio .gitignore gerido pelo framework.
+# ==========================================
