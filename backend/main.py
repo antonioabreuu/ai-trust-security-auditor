@@ -5,10 +5,10 @@ import json
 import os
 import random
 from datetime import datetime
-import models
-from database import engine
-from pii_detector import scan_for_pii
-from grounding_checker import calculate_grounding_score  # Novo import
+from backend import models
+from backend.database import engine
+from backend.pii_detector import scan_for_pii
+from backend.grounding_checker import calculate_grounding_score  # Novo import
 
 # Criação do banco de dados
 models.Base.metadata.create_all(bind=engine)
