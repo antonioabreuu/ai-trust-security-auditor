@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Download, ShieldAlert, ShieldCheck, Activity, AlertTriangle, FileWarning, Fingerprint, Database, Terminal, Search, X } from 'lucide-react';
 
+const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://127.0.0.1:8000';
+
 export default function Dashboard() {
   const [mounted, setMounted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +28,7 @@ export default function Dashboard() {
 
   const fetchAuditData = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/audit/pii-leak', { 
+      const response = await fetch(`${API_URL}/audit/pii-leak`, { 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ profile: scanProfile })
@@ -75,7 +77,7 @@ export default function Dashboard() {
       }, 500);
 
       // 1. Executa o teste de injeção (mantendo no backend)
-      await fetch('http://127.0.0.1:8000/audit/prompt-injection', {
+      await fetch(`${API_URL}/audit/prompt-injection`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
